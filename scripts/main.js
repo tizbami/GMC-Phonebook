@@ -11,4 +11,6 @@ window.addEventListener("load", () => {
         document.getElementById("main-content").style.display = "block";
         document.getElementById("main-content").style.opacity = 1; // Fade in main content
     }, 1000); // Match transition duration for smoothness
+
+    
 });
