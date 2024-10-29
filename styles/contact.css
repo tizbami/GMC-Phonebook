@@ -8,6 +8,5 @@
     width: 200px;
     height: auto;
     opacity: 0.8;
-    transition: opacity 0.1s ease;
-    
+    transition: opacity 0.1s ease;  
 }
