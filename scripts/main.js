@@ -14,3 +14,10 @@ window.addEventListener("load", () => {
 
     
 });
+
+// add contact button
+const addContact = document.getElementById("addContact");
+function showContact() {
+    window.location.href = "contacts.html";
+}
+addContact.addEventListener("click", showContact);

@@ -1,9 +1,4 @@
-// add contact button
-const addContact = document.getElementById("addContact");
-function showContact() {
-    window.location.href = "contacts.html";
-}
-addContact.addEventListener("click", showContact);
+
 const contactElem = document.getElementById("createContactForm");
 
 console.log(contactElem);
