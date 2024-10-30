@@ -1,19 +1,20 @@
 
 const contactElem = document.getElementById("createContactForm");
 
-console.log(contactElem);
-
 // create local storage
 const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
-console.log(contacts);
+
 const createContact = (e) => {
     e.preventDefault();
    let fullName = contactElem.names.value.trim();
    let phone = contactElem.phone.value.trim();
    let email = contactElem.email.value.trim();
    let address = contactElem.address.value.trim();
+
    if(fullName && phone && email && address){
     const contact = {fullName, phone, email, address};
+
+    // add contact
     contacts.push(contact);
     localStorage.setItem("contacts", JSON.stringify(contacts));
     
