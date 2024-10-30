@@ -21,3 +21,9 @@ function showContact() {
     window.location.href = "contacts.html";
 }
 addContact.addEventListener("click", showContact);
+
+const viewContact = document.getElementById("viewContact");
+function showContactList() {
+    window.location.href = "contactList.html";
+}
+viewContact.addEventListener("click", showContactList);
