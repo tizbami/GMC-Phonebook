@@ -28,6 +28,12 @@ document.getElementById("delete-btn").addEventListener("click", function() {
     }
 })
 
+// addeventlistener to edit button
+document.getElementById("edit-btn").addEventListener("click", function() {
+    localStorage.setItem("selectedContactName", contact.fullName);
+    window.location.href = "update.html";
+})
+
 
     
 
