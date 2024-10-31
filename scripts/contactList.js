@@ -26,7 +26,8 @@ function displayContacts() {
     // create a function to accesseach contact and display them in a different page
 
     li.addEventListener('click', () => {
-        window.location.href = `index.html`;
+        localStorage.setItem('selectedContactName', contact.fullName);
+        window.location.href = `render.html`;
     });
 
     });

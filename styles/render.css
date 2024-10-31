@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainLogo {
+    width: 200px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.1s ease;  
+}
+
+/* style to make the contact list centered */
+#contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border: 4px solid #5b8bc9;
+    /* margin: 10px 500px; */
+    width: 25vw;
+    height: auto;
+    margin: 10px auto;
+
+    padding: 20px;
+    border-radius: 16px;
+}
+
+#title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: rgb(242, 136, 15);
+}
+
+#contact-info p {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-weight: 500;
+    opacity: 0.8;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+#contact-info hr {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+/* #contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  } */
+  
+  #contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  #buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #buttons #edit-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  #buttons #delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+
+  /* do a media query for smaller screens for all the contact details */
+  @media screen and (max-width: 600px) {
+    #contact-container {
+      width: 90%;
+    }
+  }
