@@ -5,9 +5,22 @@
     box-sizing: border-box;
 }
 
+/* https://images.unsplash.com/photo-1639148604856-0d8ffc69fa5f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D */
+
+/* https://images.unsplash.com/photo-1718664969920-f289816377fa?q=80&w=1892&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D */
+
 body, html {
     height: 100%;
     font-family: Arial, sans-serif;
+}
+
+/* style background image */
+body {
+    background-image: url('https://images.unsplash.com/photo-1525598912003-663126343e1f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 /* Splash Screen Styling */
@@ -30,6 +43,8 @@ body, html {
     opacity: 0.8;
     transition: opacity 1s ease;
 }
+
+
 
 /* Main content is initially hidden */
 .mainLogo {

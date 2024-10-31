@@ -15,8 +15,14 @@ console.log("data", contactsList);
 // create a function to loop through each contact in the contactsList Array, and render them to the contact list innerHTML li
 
 const contactListElem = document.getElementById('contactListBox');
-console.log(contactListElem);
+
 function displayContacts() {
+
+    // sort the contact list alphabetically from the localStorage
+    contactsList.sort((a, b) => (a.fullName || "").localeCompare(b.fullName || ""));
+
+    // clear any existing contacts
+    contactListElem.innerHTML = '';
     
     contactsList.forEach(contact => {
         const li = document.createElement('li');

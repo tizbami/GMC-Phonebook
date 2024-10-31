@@ -11,6 +11,27 @@
     transition: opacity 0.1s ease;  
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#homeBtnContainer {
+    margin-right: 40px;
+}
+
+#arrow {
+    cursor: pointer;
+    font-size: 50px;
+
+}
+
+#arrow:hover {
+    color: #3872be;
+    opacity: 0.8;
+}
+
 /* style to make the contact list centered */
 #contact-container {
     display: flex;
@@ -37,7 +58,7 @@
 }
 
 #contact-info p {
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-size: 1.3rem;
     font-weight: 500;
     opacity: 0.8;

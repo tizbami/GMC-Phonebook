@@ -10,3 +10,28 @@
     opacity: 0.8;
     transition: opacity 0.1s ease;  
 }
+
+/* <span class="material-symbols-outlined">
+arrow_back
+</span> */
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#homeBtnContainer {
+    margin-right: 40px;
+}
+
+#arrow {
+    cursor: pointer;
+    font-size: 50px;
+
+}
+
+#arrow:hover {
+    color: #3872be;
+    opacity: 0.8;
+}

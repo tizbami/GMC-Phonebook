@@ -11,36 +11,63 @@
     transition: opacity 0.1s ease;  
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#homeBtnContainer {
+    margin-right: 40px;
+}
+
+#arrow {
+    cursor: pointer;
+    font-size: 50px;
+
+}
+
+#arrow:hover {
+    color: #3872be;
+    opacity: 0.8;
+}
+
 /* style to make the contact list centered */
 .contactContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: 4px dotted #5b8bc9;
+    justify-content: flex-start;
+    border: 4px solid #5b8bc9;
     /* margin: 10px 500px; */
     width: 25vw;
-    height: auto;
+    /* height: auto; */
+    max-height: 400px;
     margin: 10px auto;
-
-    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* padding: 10px; */
     border-radius: 16px;
 }
 
-#contactList {
-    margin-top: 30px;
-    list-style-type: none;   
-    text-transform: capitalize; 
-    text-align: center;
+.contactContainer::-webkit-scrollbar {
+    display: none;
 }
 
 #search {
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #5b8bc9;
-    width: 340px;
-    margin: 15px 0;
+    display: block;
     position: sticky;
+    top: 0;
+    width: 300px;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    border-bottom: 2px solid #5b8bc9;
+    border-radius: 10px;
+    margin-top: 0;
+    font-size: 14px;
+    color: #5b8bc9;
+    text-transform: capitalize;
     
     
 }
@@ -50,13 +77,14 @@
 }
 
 .contactListStyle {
-    width: 300px;
+    width: 250px;
     cursor: pointer;
     font-size: 14px;
     margin-top: 15px;
     padding: 10px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    text-transform: capitalize;
     color: black;
     list-style-type: none;
     font-weight: 400;
@@ -65,6 +93,7 @@
 .contactListStyle:hover {
     background-color: #5b8bc9;
     color: white;
+    width: 250px;
 }
 
 /* do a media query for smaller screens for all the contact list */
@@ -76,5 +105,6 @@
     }
     .contactListStyle {
         width: 100%;
+        
     }
 }
