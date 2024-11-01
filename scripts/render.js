@@ -22,9 +22,15 @@ if (contact) {
 document.getElementById("delete-btn").addEventListener("click", function() {
     const index = contacts.findIndex(contact => contact.fullName === selectedContactName);
     if (index !== -1) {
-        contacts.splice(index, 1);
+
+        confirm = window.confirm("Are you sure you want to delete this contact?");
+
+        if (confirm) {
+            contacts.splice(index, 1);
         localStorage.setItem("contacts", JSON.stringify(contacts));
         window.location.href = "contactList.html";
+        }
+        
     }
 })
 
