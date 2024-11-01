@@ -28,8 +28,13 @@
 }
 
 #arrow:hover {
-    color: #3872be;
+    color: #133e75;
     opacity: 0.8;
+}
+
+.arrowLink {
+    text-decoration: none;
+    color:#5b8bc9;
 }
 
 /* style to make the contact list centered */
@@ -48,7 +53,7 @@
     border-radius: 16px;
 }
 
-#title {
+.title {
     margin-bottom: 30px;
     font-size: 2.5rem;
     font-weight: bold;
@@ -102,13 +107,15 @@
   }
   
   #buttons #edit-btn {
-    background-color: #4CAF50;
+    background-color: #5b8bc9;
     color: white;
+    font-size: 1.2rem;
   }
   
   #buttons #delete-btn {
-    background-color: #f44336;
+    background-color: #5b8bc9;
     color: white;
+    font-size: 1.2rem;
   }
 
   /* do a media query for smaller screens for all the contact details */

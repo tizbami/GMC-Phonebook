@@ -20,6 +20,8 @@ function displayContacts() {
 
     // sort the contact list alphabetically from the localStorage
     contactsList.sort((a, b) => (a.fullName || "").localeCompare(b.fullName || ""));
+    
+
 
     // clear any existing contacts
     contactListElem.innerHTML = '';
@@ -59,6 +61,13 @@ searchInput.addEventListener('input', function() {
         li.textContent = `${contact.fullName}`;
         li.classList.add('contactListStyle'); // Add a class for styling or targeting
         contactListElem.appendChild(li);
+
+        // Add event listener to the new li element
+        li.addEventListener('click', () => {
+            localStorage.setItem('selectedContactName', contact.fullName);
+            window.location.href = `render.html`;
+        });
+
     });
     if (filteredContacts.length === 0) {
         const li = document.createElement('li');

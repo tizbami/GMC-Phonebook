@@ -4,6 +4,22 @@ const contactElem = document.getElementById("createContactForm");
 // create local storage
 const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 
+
+// prevent the enter key from submitting
+const inputFields = document.querySelectorAll('#createContactForm input');
+
+inputFields.forEach((field, index) => {
+    field.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const nextField = inputFields[index + 1];
+            if (nextField) {
+                nextField.focus();
+            }
+        }
+    });
+});
+
 const createContact = (e) => {
     e.preventDefault();
    let fullName = contactElem.names.value.trim();
@@ -11,9 +27,22 @@ const createContact = (e) => {
    let email = contactElem.email.value.trim();
    let address = contactElem.address.value.trim();
 
+   // Validate email address
+   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   if (!emailRegex.test(email)) {
+       alert("Invalid email address");
+       return;
+   }
+
+   // Validate phone number
+   if (!/^\d+$/.test(phone)) {
+       alert("Phone number must be numeric");
+       return;
+   }
+
    if(fullName && phone && email && address){
     const contact = {fullName, phone, email, address};
-
+    alert("Contact added");
     // add contact
     contacts.push(contact);
     localStorage.setItem("contacts", JSON.stringify(contacts));
@@ -26,6 +55,9 @@ const createContact = (e) => {
    }else{
     alert("All fields are required");
    };
+
+
+
 
 }
 contactElem.addEventListener("submit", createContact)

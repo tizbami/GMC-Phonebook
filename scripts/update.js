@@ -16,6 +16,21 @@ if (contact) {
 // Handle updating the contact
 const updateContactForm = document.getElementById("updateContactForm");
 
+// prevent the enter key from submitting
+const inputFields = document.querySelectorAll('#updateContactForm input');
+
+inputFields.forEach((field, index) => {
+    field.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const nextField = inputFields[index + 1];
+            if (nextField) {
+                nextField.focus();
+            }
+        }
+    });
+});
+
 const updateContact = (e) => {
     e.preventDefault();
 
@@ -23,6 +38,20 @@ const updateContact = (e) => {
     const phone = document.getElementById("contactPhone").value.trim();
     const email = document.getElementById("contactEmail").value.trim();
     const address = document.getElementById("contactAddress").value.trim();
+
+    // Validate email address
+   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   if (!emailRegex.test(email)) {
+       alert("Invalid email address");
+       return;
+   }
+
+   // Validate phone number
+   if (!/^\d+$/.test(phone)) {
+
+       alert("Phone number must be numeric");
+       return;
+   }
 
     if (fullName && phone && email && address) {
         // Update the contact details in the contacts array

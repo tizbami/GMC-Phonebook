@@ -28,8 +28,22 @@
 }
 
 #arrow:hover {
-    color: #3872be;
+    color: #133e75;
     opacity: 0.8;
+}
+
+.arrowLink {
+    text-decoration: none;
+    color: #5b8bc9;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: rgb(242, 136, 15);
 }
 
 /* style to make the contact list centered */
@@ -66,7 +80,7 @@
     border-radius: 10px;
     margin-top: 0;
     font-size: 14px;
-    color: #5b8bc9;
+    color: black;
     text-transform: capitalize;
     
     
@@ -96,15 +110,36 @@
     width: 250px;
 }
 
+.buttonColor {
+    background-color: #5b8bc9!important;
+}
+
 /* do a media query for smaller screens for all the contact list */
 @media only screen and (max-width: 600px) {
     .contactContainer {
-        width: 100%;
-        margin: 0;
+        width: 90%;
+        margin: auto;
         padding: 0;
+        overflow-x: hidden;
     }
-    .contactListStyle {
-        width: 100%;
+    .contactListStyle, #search {
+        width: 200px;
+        
         
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .contactContainer {
+        width: 70%;
+        margin: auto;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .contactListStyle, #search {
+        width: 250px;
+        
+        
+    }
+}
+
